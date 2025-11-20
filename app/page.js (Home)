@@ -1,9 +1,8 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import images from '../../images.json' // JSON को सीधे import कर रहे हैं
+import images from '../images.json' // <-- note: one level up from app/
 
 export default function Home() {
-  // images अब सीधे import से मिल रहा है
   return (
     <section className="bg-royalbg text-white">
       <div className="container mx-auto p-6">
