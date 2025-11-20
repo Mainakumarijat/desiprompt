@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Load Sheffron font */
+@font-face {
+font-family: 'Sheffron';
+src: url('/fonts/Sheffron.woff2') format('woff2');
+font-weight: 100 900;
+font-style: normal;
+font-display: swap;
+}
+
+
+body {
+background: #070707;
+color: #ffffff;
+font-family: 'Sheffron', ui-serif, serif;
+}
+
+
+.container {
+max-width: 1100px;
+margin: 0 auto;
+}
+
+
+/* Premium Scrollbar */
+::-webkit-scrollbar {
+width: 8px;
+}
+::-webkit-scrollbar-track {
+background: #0a0a0a;
+}
+::-webkit-scrollbar-thumb {
+background: #D4AF37;
+border-radius: 10px;
+}
