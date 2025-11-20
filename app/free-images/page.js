@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import images from '../../../images.json' // relative path from app/free-images
+import images from '../../images.json' // <-- note: two levels up from app/free-images
 
 export default function FreeImages(){
   return (
