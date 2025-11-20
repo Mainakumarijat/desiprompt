@@ -1,12 +1,12 @@
 [
-{
-"id":"img-001",
-"title":"Rajasthani Woman",
-"url":"https://res.cloudinary.com/<your_cloud>/image/upload/v0000000000/rajasthani-woman.jpg",
-"optimized":"https://res.cloudinary.com/<your_cloud>/image/upload/f_auto,q_auto,w_600/v0000000000/rajasthani-woman.jpg",
-"mainCategory":"Regional",
-"categories":["Regional","Rajasthani","Women"],
-"tags":["rajasthani","woman","traditional"],
-"prompt":"Rajasthani woman wearing traditional dress, vivid colors, close-up"
-}
+  {
+    "id":"img-001",
+    "title":"Rajasthani Woman",
+    "url":"https://res.cloudinary.com/<your_cloud>/image/upload/v0000000000/rajasthani-woman.jpg",
+    "optimized":"https://res.cloudinary.com/<your_cloud>/image/upload/f_auto,q_auto,w_600/v0000000000/rajasthani-woman.jpg",
+    "mainCategory":"Regional",
+    "categories":["Regional","Rajasthani","Women"],
+    "tags":["rajasthani","woman","traditional"],
+    "prompt":"Rajasthani woman wearing traditional dress, vivid colors, close-up"
+  }
 ]
