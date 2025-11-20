@@ -1,12 +1,13 @@
 import Image from 'next/image'
-import images from '../../images.json' // <-- note: two levels up from app/free-images
+import images from '../../images.json'   // FINAL CORRECT PATH (2 LEVELS UP)
 
-export default function FreeImages(){
+export default function FreeImages() {
   return (
     <section className="container mx-auto p-6 text-white">
       <h1 className="text-2xl mb-4">Free Images</h1>
+
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {images.map(img=> (
+        {images.map(img => (
           <div key={img.id} className="bg-[#0f0f0f] rounded overflow-hidden">
             <Image src={img.optimized || img.url} alt={img.title} width={600} height={400} />
             <div className="p-3">
