@@ -1,32 +1,25 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import fs from 'fs'
-import path from 'path'
-
+import images from '../../images.json' // JSON को सीधे import कर रहे हैं
 
 export default function Home() {
-const dataPath = path.join(process.cwd(), 'images.json')
-let images = []
-try { images = JSON.parse(fs.readFileSync(dataPath)) } catch(e) { images = [] }
+  // images अब सीधे import से मिल रहा है
+  return (
+    <section className="bg-royalbg text-white">
+      <div className="container mx-auto p-6">
+        <h1 className="text-4xl font-bold">Royal Premium Free Images</h1>
+        <p className="mt-2 text-gray-300">Explore regional & lord portrait images — free to use.</p>
+        <Link href="/free-images"><a className="inline-block mt-4 bg-gold text-black px-4 py-2 rounded">Explore Free Images</a></Link>
 
-
-return (
-<section className="bg-royalbg text-white">
-<div className="container mx-auto p-6">
-<h1 className="text-4xl font-bold">Royal Premium Free Images</h1>
-<p className="mt-2 text-gray-300">Explore regional & lord portrait images — free to use.</p>
-<Link href="/free-images" className="inline-block mt-4 bg-gold text-black px-4 py-2 rounded">Explore Free Images</Link>
-
-
-<h2 className="mt-10 text-2xl">Featured</h2>
-<div className="mt-4 flex gap-4 overflow-x-auto">
-{images.slice(0,8).map(img => (
-<div key={img.id} className="min-w-[300px] rounded overflow-hidden shadow-lg">
-<Image src={img.optimized || img.url} alt={img.title} width={480} height={300} />
-</div>
-))}
-</div>
-</div>
-</section>
-)
+        <h2 className="mt-10 text-2xl">Featured</h2>
+        <div className="mt-4 flex gap-4 overflow-x-auto">
+          {images.slice(0,8).map(img => (
+            <div key={img.id} className="min-w-[300px] rounded overflow-hidden shadow-lg">
+              <Image src={img.optimized || img.url} alt={img.title} width={480} height={300} />
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
 }
