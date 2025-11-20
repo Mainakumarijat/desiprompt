@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import images from '../images.json' // <-- note: one level up from app/
+import images from '../images.json'   // FINAL CORRECT PATH (1 LEVEL UP)
 
 export default function Home() {
   return (
@@ -8,7 +8,10 @@ export default function Home() {
       <div className="container mx-auto p-6">
         <h1 className="text-4xl font-bold">Royal Premium Free Images</h1>
         <p className="mt-2 text-gray-300">Explore regional & lord portrait images — free to use.</p>
-        <Link href="/free-images"><a className="inline-block mt-4 bg-gold text-black px-4 py-2 rounded">Explore Free Images</a></Link>
+
+        <Link href="/free-images">
+          <span className="inline-block mt-4 bg-gold text-black px-4 py-2 rounded">Explore Free Images</span>
+        </Link>
 
         <h2 className="mt-10 text-2xl">Featured</h2>
         <div className="mt-4 flex gap-4 overflow-x-auto">
